@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props";
+
+html, body {
+    scrollbar-width: none;
+    color: lighten(black, 17%);
+    background-color: var(--gray-1);
+    @media(prefers-color-scheme: dark) {
+        color: white;
+        background-color: var(--gray-9);
+    }
+}
+
+h1 {
+    font-family: 'Fredoka One', sans-serif;
+}
+
+
+
+svg {
+    cursor: pointer;
+    path {
+        stroke: currentColor;
+    }
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    &:visited {
+        color: currentColor;
+    }
+}
+
+:where(h1, h2, h3, h4, h5, h6, dt) {
+    color: currentColor;
+}
+
+#socials {
+    svg {
+        fill: transparent;
+    }
+}
+
+.footerStyle {
+    @apply before:absolute before:h-1 before:right-0 before:top-5 before:z-[-3] before:w-full before:bg-brandDark;
+}
